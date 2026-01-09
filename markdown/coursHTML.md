@@ -62,3 +62,10 @@ selecteur{
 
 On peut écrire le CSS:
 -dans le fichier html entre les balises `<style></style>`
+dans un fichier dédié avec l'extension`.css`; il faut ajouter
+une balise`<link rel="stylesheet" href="">`
+
+
+Il existe plus de 500 propriétés et encore davantage de valeur possibles mais souvent, les valeurs sont :
+- des couleurs (soit un nom soit un code comme rgb(0-255,0-255,0-255))
+-
