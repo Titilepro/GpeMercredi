@@ -4,6 +4,44 @@
 
 
 p  {
-    background-color: #00000056;
-    color : black
+    background-color: #000000a1;
+    color : black;
+    /*width :  200 px*/;
+    width: 50%;
 }
+
+img {
+    height: 200px;
+    border-style: solid;
+    border-color: greenyellow;
+    border-radius: 5px;
+    /*padding: 20px
+    padding-top:20px;
+    padding-bottom:20px;*/
+    margin-left: 40% ;
+}
+
+h1{
+    border-style:dotted;
+    border-bottom:solid ;
+}
+    {
+
+}
+
+
+
+.premier{
+    background-color:chartreuse;
+    width: 150%;
+    text-align:left ;
+}
+
+#deux {
+    background-color: blue;
+    width: 20%;
+    text-align:justify;
+    font-size:15px; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*Beacoup de sites utilisent des fonts externes*/
