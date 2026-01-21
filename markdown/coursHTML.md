@@ -98,3 +98,68 @@ Rem: il existe des propriétés spécifiques au texte, en particulier:
 Ils existes deux balises HTML universelles qui permettent de grouper des éléments ou du texte:
 - `<div></div>`
 - `<span></span>`
+
+3.Javascript
+
+Il s'agit d'un language de programation comme Python mais initialement dédié au WEB.
+
+C'est un language prévu pour interagir avec une page html: le document peut se représenter ainsi:
+image du DOM (Document Object Model:)
+window
+ ├── alert()
+ └── document
+      ├── getElementById()
+      └── querySelector()
+            ↓
+         élément HTML
+            ├── innerHTML
+            ├── style
+            │     ├── color
+            │     ├── backgroundColor
+            │     └── display
+            └── addEventListener()
+
+Le JS permet de rendre une page HTML plus dinamique notament grace au formulaire `<from></from>`
+
+les élement Html interactifs sont généralement des `<imput type="">`
+-button
+-check box
+-text
+-range
+-password
+
+
+Pour écrire du JS on utilise les balises`<script></script>` et :
+-on écrit directement le code dans le fichier 
+
+Pour attraper un élément sur la page afin de la manipuler avec JS, on peut utiliser:
+-`querySelector()`
+-`getElementById()`
+
+
+On écrira :
+```js
+let elementHTML = document.querySelector(""); // avec un sélecteur css
+let elementHTML = document.getElementById("") //avec un id
+```
+
+
+la plupart des élément HTML interactifs ont une propriété `value`.
+
+```js
+console.log(elementHTML.value);
+```
+
+JS est capable d'associer un évènement à un élément HTML:
+-click
+-change
+-input
+-mouseover ....
+
+on utilise la méthode `addEventListener()`
+
+```js
+elementHTML.addEventListener("event", function(){
+    //faire quelquechose
+});
+```
