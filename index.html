@@ -14,7 +14,7 @@
         <input type="range" name ="range" id="range" value="82">
         <input type="button" value = "Clique" id="btn">
         <input type="checkbox" name ="box" id="box">
-        <input type="text" name ="text" id="text" value="maxime tu n'est pas grand de taille mais de pensé">
+        <input type="text" name ="text" id="text" value="coucou">
     </form>
     <script>
     let titre = document.querySelector(".t2");
@@ -29,17 +29,21 @@
     //console.log(curseur.value);
 
     let btn=document.getElementById("btn");
-    btn.addEventListener("click", function(){
+    btn.addEventListener("click", function()
+    {
         console.log("tu as cliquer");
         if(pression == false)
-        {titre.style.color = "red";
+        {
+        titre.style.color = "red";
         titre.style.fontSize= "50px"
         pression = true
         }
-        else{
-        btn.value="hihihihi"
+        else
+        {
+        btn.value="hihihihi";
         titre.style.color="blue";
-        pression = false;
+        pression = false
+        }
     });
     </script>
 </body>
