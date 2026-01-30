@@ -69,6 +69,9 @@ Syntaxe générale:    `nom --option argument` ou `nom -option argument`
 |`cp`|copier une source vers une destination|`$ cp <source><destination>`|
 |`rm`| supprimer des dossiers ou des fichiers |`$ rm -r <chemin>`|
 |`mv`| couper ou renommer des fichiers |`$ mv <source><destination> `|
+|`echo`|affiche un texte sur la sortie standard (ecran) |`$ echo "i love you" `|
+|`chmod`|modifie les permissions des fichiers (dossiers) |`$ chmod 777 monFichier `|
+
 ---------------
 Pour éditer un fichier plusieurs commandes/éditeurs sont possibles :
 - `nano` (dans ce cours)
@@ -84,7 +87,7 @@ On peut rappeler une commade à partir de son numéro dans l'historique:
 $ !n
 ```
 ---------------
-le chemin absolu vers un ficher ou un dossier est le chelin depiuis la racine (*root*)`/`: par exemple `/workspaces/GpeMercredi`.
+le chemin absolu vers un ficher ou un dossier est le chemin depuis la racine (*root*)`/`: par exemple `/workspaces/GpeMercredi`.
 
 un chemin relatif commence par `./` ou `../` : on part du dossier courant.
 
@@ -99,3 +102,38 @@ $ cp cheminVersFichier cheminVersDossier/
 ```bash
 $ cp cheminVersFichier cheminVersDossier/NouveauNom
 ```
+
+
+
+la commande `mv` se comporte de manière semblable.
+
+---------------
+la commande `rmdir` supprime des dossiers vides; on lui préfère souvent `rm -r` qui supprime les fichiers et les dossiers.
+
+------------
+Il est possible d'écrire des commandes dans un fichier portant l'extension `.sh` ; pour exécuter ce fichier:
+
+```bash
+./monFichier.sh
+```
+
+Par défaut, les fichier sur Linux ne sont pas exécutables. Quand on crée un fichier (un dossier), il possède des **permissions** qui peuvent être différentes pour:
+-`user` c'est le propriétare
+-`group` c'est le membre d'un groupe particulier
+-`other` le reste du monde
+
+
+les permmission sur un fichier (un dossier) sont:
+- *read*: `r` valeur 4
+- *write*: `w` valeur 2
+- *execute*: `x` valeur 1
+
+la command `chmod nnn` permet de modifier les permission ; il existe une autre syntaxe ave les lettres `u,g,o`(user,groupe, other) et les symboles `+,-` pour ajouter ou retirer des droits.
+
+```bash
+chmod 754 ./monFichier              # rwx pour urser,rx pour group, r pour other
+chmod u-x,g+rw,o+w ./monFichier     # retire x pour user, ajoute rw pour group, ajoute w pour other
+```
+
+-----------------
+le symbole `>` ou `>>` permet de *rediriger* la sortie d'une commande vers un fichier. Si ce fichier n'existe pas, alors il est crée.
