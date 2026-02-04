@@ -71,29 +71,31 @@ Syntaxe générale:    `nom --option argument` ou `nom -option argument`
 |`mv`| couper ou renommer des fichiers |`$ mv <source><destination> `|
 |`echo`|affiche un texte sur la sortie standard (ecran) |`$ echo "i love you" `|
 |`chmod`|modifie les permissions des fichiers (dossiers) |`$ chmod 777 monFichier `|
-
----------------
+|`head`|affiche les permières lignes d'un fichier|`$ head monFichier `|
+|`tail`|affiche les dernières lignes d'un fichier|`$ tail n-3 monFichier `|
+|`grep`|attraper une chaine dans un fichier|`$ grep chaine monFichier`|
+-----------------
 Pour éditer un fichier plusieurs commandes/éditeurs sont possibles :
 - `nano` (dans ce cours)
 - `vi`
 - `emacs`
----------------
+-----------------
 dans la console, `./`est falcutatif.
 
----------------
+-----------------
 On peut rappeler une commade à partir de son numéro dans l'historique:
 
 ```bash
 $ !n
 ```
----------------
+-----------------
 le chemin absolu vers un ficher ou un dossier est le chemin depuis la racine (*root*)`/`: par exemple `/workspaces/GpeMercredi`.
 
 un chemin relatif commence par `./` ou `../` : on part du dossier courant.
 
 la maison de l'utiisateur (`/home/utilisateur` ou `-`) est accessible avec la commande `cd` sans argument.
 
--------------
+-----------------
 la commande `cp` peut copier et renommer
 
 ```bash
@@ -107,10 +109,10 @@ $ cp cheminVersFichier cheminVersDossier/NouveauNom
 
 la commande `mv` se comporte de manière semblable.
 
----------------
+-----------------
 la commande `rmdir` supprime des dossiers vides; on lui préfère souvent `rm -r` qui supprime les fichiers et les dossiers.
 
-------------
+-----------------
 Il est possible d'écrire des commandes dans un fichier portant l'extension `.sh` ; pour exécuter ce fichier:
 
 ```bash
@@ -136,4 +138,17 @@ chmod u-x,g+rw,o+w ./monFichier     # retire x pour user, ajoute rw pour group, 
 ```
 
 -----------------
-le symbole `>` ou `>>` permet de *rediriger* la sortie d'une commande vers un fichier. Si ce fichier n'existe pas, alors il est crée.
+le symbole `>` ou `>>` permet de *rediriger* la sortie d'une commande vers un fichier. Si ce fichier n'existe pas, alors il est crée. le symbole `>>` ajoute le texte à la suite sans écraser.
+
+-----------------
+
+Les fichiers python `.py` ne sont pas des fichiers exécutable dans le shell. Il faut un programme 
+pour les exécuter : `python ./monFichier.py`
+# Ex1
+[https://codex.forge.apps.education.fr/exercices/course_cycliste/](https://codex.forge.apps.education.fr/exercices/course_cycliste/)
+
+# Ex 2
+[https://codex.forge.apps.education.fr/exercices/syracuse/](https://codex.forge.apps.education.fr/exercices/syracuse/)
+
+# Ex 3
+[https://codex.forge.apps.education.fr/exercices/derniere_occurrence/](https://codex.forge.apps.education.fr/exercices/derniere_occurrence/)

@@ -43,4 +43,27 @@ on se retrouve dans workspaces
 
 ----------------
 ## correction
--pwd
+- pwd
+- ls
+- mkdir ./Dossier1
+- Dossier1 apparaît surligné en vert (comme tous les dossiers)
+- cd ./Dossier1
+- pwd
+- touch ./fic1.txt
+- cd ../ ou cd /workspaces/web2026
+- l'option -F ajouter un slash après les dossiers
+- cp ./Dossier1/fic1.txt ./Dossier1/fic2.txt  puis cp ./Dossier1/fic1.txt ./fic3.txt
+- mv ./Dossier1/fic1.txt ./Dossier1/FichierNSI <br>
+-tree
+-cd ../ && pwd (on enchaine les commandes) : On est remonté d'un range dans l'arboresence
+-rmdir ne supprime que des dossiers vides
+-re -i pose une question avant chaque opération 
+-mkdir ./DA ./DA/DB ./DA/DC
+-tree
+-cd ./DA/DC
+-On peut éditer le fichier avec nano pour écrire les lignes ou utiliser echo avec l'option -e
+    echo -e "J'aime la NSI
+>J'aime la NSI" > ./fic3.txt
+
+-head -n 4 ./fic3.txt
+-tail -n 3 ./fic3.txt
